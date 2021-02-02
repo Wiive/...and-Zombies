@@ -11,8 +11,6 @@ public class EnemieMovement : MonoBehaviour
     GameObject player;
 
     //Spawn
-    //Looking for player
-    //Go towards player
     //Die
     //Attack
 
@@ -20,12 +18,12 @@ public class EnemieMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (GameObject.FindGameObjectWithTag("Player") != null)             //Looking if a object with the "Player"-tag is in the scene
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag("Player");            //If it adds it to the GameObject Player
         }
         else
-            Debug.LogError("Missing Player Prefans Objec in Scene");
+            Debug.LogError("Missing Player Prefans Objec in Scene");        //If not it makes our own error message to remeber to place a player in the scene
         
     }
 
@@ -39,7 +37,7 @@ public class EnemieMovement : MonoBehaviour
 
     private void Spawn()
     {
-
+        //Mayeb implement a obeject pool of more 
     }
 
     private void MoveTowardsPlayer()
@@ -49,10 +47,16 @@ public class EnemieMovement : MonoBehaviour
         RB.velocity = direction * speed;
 
     }
-
-
     private void GotKilled()
     {
         isAlive = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            Debug.Log(gameObject + " was killed by" + collision.gameObject);
+        }
     }
 }
