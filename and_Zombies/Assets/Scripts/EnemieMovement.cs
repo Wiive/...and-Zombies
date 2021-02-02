@@ -24,14 +24,14 @@ public class EnemieMovement : MonoBehaviour
         }
         else
             Debug.LogError("Missing Player Prefans Objec in Scene");        //If not it makes our own error message to remeber to place a player in the scene
-        
+
     }
 
     private void Update()
     {
         if(isAlive)
         {
-            MoveTowardsPlayer();
+           MoveTowardsPlayer();
         }
     }
 
