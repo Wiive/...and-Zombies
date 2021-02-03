@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CactusPower : MonoBehaviour
 {
-    [SerializeField] float powerUpTime = 6;
+    public float powerUpTime = 6;
 
-    public void ActivedCactusPower()
+    public void ActivedCactusPower(float timer)
     {
         Debug.Log("The player can kill Zombies for " + powerUpTime + " seconds!");
     }
