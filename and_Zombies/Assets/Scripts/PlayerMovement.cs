@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.y = Input.GetAxisRaw("Vertical");
         movement.x = Input.GetAxisRaw("Horizontal");
-
     }
 
     private void FixedUpdate()
