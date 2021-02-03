@@ -19,14 +19,11 @@ public class ItemListManager : MonoBehaviour
             ListText[i].color = Color.red;
         }
     }
-    private void Update()
-    {
-        WinCondition();
-    }
     public virtual void ObjectObtained(int ItemIndex)
     {
         ListText[ItemIndex].color = Color.green;
         ItemObtained[ItemIndex] = true;
+        WinCondition();
     }
     private void WinCondition()
     {
