@@ -22,6 +22,10 @@ public class Health : MonoBehaviour
         {
             DamagePlayer(1);
         }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            ChangeHealth(1);
+        }
     }
     public virtual void DamagePlayer(int damage)
     {
@@ -33,6 +37,7 @@ public class Health : MonoBehaviour
     public virtual void ChangeHealth(int amount)
     {
         currentHealth = currentHealth + amount;
+        UI_Heart[currentHealth - 1].SetActive(true);
         Checkhealth();
     }
 
