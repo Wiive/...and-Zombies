@@ -11,7 +11,6 @@ public class EnemieMovement : MonoBehaviour
     GameObject player;
 
     //Spawn
-    //Die
     //Attack
 
     private void Start()
@@ -50,14 +49,16 @@ public class EnemieMovement : MonoBehaviour
     private void GotKilled()
     {
         isAlive = false;
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
-        {           
-            Debug.Log(gameObject + " was killed by" + collision.gameObject);
-            //If player has Cactus this happens ^
+        {
+            var player = collision.gameObject;
+            if (player.GetComponent<PlayerPickUp>().CactusPower())
+                GotKilled();
         }
     }
 }

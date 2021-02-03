@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8141196180557521112}
   - component: {fileID: 6535828719993808264}
   - component: {fileID: 5925678872785077164}
+  - component: {fileID: 7294850939352982348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -108,7 +109,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1793384553585544289
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792e6dd9ab2f1e547b372d32e88174c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCactusPower: 0
 --- !u!61 &5925678872785077164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,6 +178,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18.510738, y: 10.167471}
   m_EdgeRadius: 0
+--- !u!114 &7294850939352982348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514182747078553433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169cf742b319337458cc850b4b2f6048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerState: 0
+  lookDirection: 0
+  xAxis: 0
+  yAxis: 0
 --- !u!1 &2514182747243171029
 GameObject:
   m_ObjectHideFlags: 0
