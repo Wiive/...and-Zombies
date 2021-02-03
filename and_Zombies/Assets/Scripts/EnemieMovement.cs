@@ -55,8 +55,9 @@ public class EnemieMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
-        {
+        {           
             Debug.Log(gameObject + " was killed by" + collision.gameObject);
+            //If player has Cactus this happens ^
         }
     }
 }
