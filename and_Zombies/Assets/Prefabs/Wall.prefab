@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6260601379545282384}
   - component: {fileID: 52812117507567131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3278068187902582323}
   - component: {fileID: 3278068187902582324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 1629571355}
   - component: {fileID: 1629571354}
   - component: {fileID: 5659931952232888570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3489108986286030218}
   - component: {fileID: 1766513111207074102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

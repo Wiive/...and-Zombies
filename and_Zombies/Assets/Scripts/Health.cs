@@ -19,10 +19,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DamagePlayer(1);
-        }
+
     }
     public virtual void DamagePlayer(int damage)
     {
