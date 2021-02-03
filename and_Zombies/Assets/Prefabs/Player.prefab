@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1793384553585544289}
   - component: {fileID: 8141196180557521112}
   - component: {fileID: 6535828719993808264}
+  - component: {fileID: 5925678872785077164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -149,6 +150,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792e6dd9ab2f1e547b372d32e88174c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &5925678872785077164
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514182747078553433}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.31914902, y: -10.723388}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18.510738, y: 10.167471}
+  m_EdgeRadius: 0
 --- !u!1 &2514182747243171029
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
+  m_Sprite: {fileID: 7282362541438502318, guid: 6f51561b40897be4d9037586f10bb5c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
