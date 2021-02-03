@@ -57,20 +57,25 @@ public class PlayerAnimation : MonoBehaviour
             }
         }
 
-        if (yAxis > 0)
+        if (yAxis > 0.5)
         {
+            Debug.Log("moving up");
             lookDirection = LookDirection.up;
         }
-        else if (yAxis < 0)
+        else if (yAxis < 0.5)
         {
+            Debug.Log("moving down");
+
             lookDirection = LookDirection.down;
         }
-        else if (xAxis < 0)
+        else if (xAxis < 0.5)
         {
+            Debug.Log("moving left");
             lookDirection = LookDirection.left;
         }
-        else if (xAxis > 0)
+        else if (xAxis > 0.5)
         {
+            Debug.Log("moving right");
             lookDirection = LookDirection.right;
         }
         anim.SetFloat("LookDir", (float)lookDirection);

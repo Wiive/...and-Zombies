@@ -29,13 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
-        if (movement.y != 0)
-        {
-            movement.x = 0;
-        }
+        movement = movement.normalized;
         RB.MovePosition(RB.position + movement * speed * Time.fixedDeltaTime);
     }
 }
