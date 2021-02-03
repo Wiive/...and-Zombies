@@ -6,9 +6,12 @@ using TMPro;
 
 public class ItemListManager : MonoBehaviour
 {
+    [Header("Objective Lists")]
     [SerializeField] private TextMeshProUGUI[] ListText;
-    private bool[] ItemObtained;
-
+    [SerializeField]private bool[] ItemObtained;
+    [Header("Win Screen")]
+    [SerializeField] private GameObject winScreen;
+    
     private void Start()
     {
         for (int i = 0; i < ListText.Length; i++)
@@ -27,9 +30,11 @@ public class ItemListManager : MonoBehaviour
     }
     private void WinCondition()
     {
-        if (ItemObtained[0] == true && ItemObtained[1] == true && ItemObtained[2] == true)
+        if (ItemObtained[0] == true && 
+            ItemObtained[1] == true && 
+            ItemObtained[2] == true)
         {
-            Debug.Log("You Won");
+            winScreen.SetActive(true);
         }
     }
 }

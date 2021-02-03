@@ -6,13 +6,14 @@ public class ItemType : MonoBehaviour
 {
     [SerializeField] private int itemID;
 
-    private ItemListManager ItemManager;
+    [SerializeField]private ItemListManager ItemManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             ItemManager.ObjectObtained(itemID);
+            gameObject.SetActive(false);
         }
     }
 }

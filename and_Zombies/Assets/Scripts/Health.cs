@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [SerializeField] protected int currentHealth;
     [Header("UI")]
     [SerializeField] private GameObject[] UI_Heart;
+    [SerializeField] private GameObject LoseScreen;
 
     public virtual void Start()
     {
@@ -18,14 +19,17 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DamagePlayer(1);
+        }
     }
     public virtual void DamagePlayer(int damage)
     {
 
         currentHealth -= damage;
         UI_Heart[currentHealth].SetActive(false);
-       
+        Checkhealth();
     }
     public virtual void ChangeHealth(int amount)
     {
@@ -49,6 +53,6 @@ public class Health : MonoBehaviour
 
     public virtual void Kill()
     {
-
+        LoseScreen.SetActive(true);
     }
 }

@@ -13,6 +13,8 @@ public class StoreSectionBehavior : MonoBehaviour
     SpriteRenderer spriteRendererLeft;
     SpriteRenderer spriteRendererRight;
 
+    public bool mainSection;
+
     private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -25,5 +27,19 @@ public class StoreSectionBehavior : MonoBehaviour
     private void Update()
     {
         RB.position += new Vector2(-speed * Time.deltaTime,0);
+    }
+
+    public bool CheckLeftPointVisibility()
+    {
+        Vector2 cameraPosition = Camera.main.transform.position;
+        Vector2 pointPosition = leftPoint.transform.position;
+
+        float screenWidth = 640 / 2;
+
+        if (pointPosition.x < (cameraPosition.x - screenWidth))
+        {
+            return false;
+        }
+        return true;              
     }
 }
