@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
     }
 
+
     private void FixedUpdate()
     {
         movement = movement.normalized;
