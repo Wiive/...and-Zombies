@@ -13,6 +13,10 @@ public class MenuManager : MonoBehaviour
     {
         StartCoroutine(AsyncLoad(SceneIndex));                                      //decided by chosen Int which scene you want
     }
+    public void Restart()                                         
+    {
+        StartCoroutine(AsyncLoad(SceneManager.GetActiveScene().buildIndex));        //Load current scene                                
+    }
     IEnumerator AsyncLoad(int SceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneIndex);         //the operator to check the process of your loading screen
@@ -30,8 +34,6 @@ public class MenuManager : MonoBehaviour
             yield return null;
         }
     }
-
-
 
 
     public void QuitGame()                                                          //Quit the application completely
