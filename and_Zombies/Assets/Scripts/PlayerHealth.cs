@@ -15,7 +15,7 @@ public class PlayerHealth : Health
         
     }
 
-    public override void ChangeHealth(float amount)
+    public override void ChangeHealth(int amount)
     {
         base.ChangeHealth(amount);
     }
@@ -44,7 +44,7 @@ public class PlayerHealth : Health
         if (collision.gameObject.CompareTag("Enemy"))
         {
             print("Collision");
-            ChangeHealth(-1f);
+            DamagePlayer(1);
         }
     }
 
