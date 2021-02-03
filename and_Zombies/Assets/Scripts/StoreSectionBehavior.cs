@@ -8,12 +8,18 @@ public class StoreSectionBehavior : MonoBehaviour
 
     Rigidbody2D RB;
 
-    public Transform leftPoint;
-    public Transform rightPoint;
+    public GameObject leftPoint;
+    public GameObject rightPoint;
+    SpriteRenderer spriteRendererLeft;
+    SpriteRenderer spriteRendererRight;
 
     private void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        spriteRendererLeft = leftPoint.GetComponent<SpriteRenderer>();
+        spriteRendererRight = rightPoint.GetComponent<SpriteRenderer>();
+        spriteRendererLeft.enabled = false;
+        spriteRendererRight.enabled = false;
     }
 
     private void Update()
