@@ -9,15 +9,21 @@ public class ItemType : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     [SerializeField]private ItemListManager ItemManager;
+    private GameObject Manager;
 
     private void Awake()
     {
+        Load();
+    }
+    public void Load()
+    {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        var ItemManager = GameObject.Find("Managers");
-        ItemManager.GetComponent<ItemListManager>();
+        Manager = GameObject.FindGameObjectWithTag("Manager");
+        ItemManager = Manager.GetComponent<ItemListManager>();
     }
     private void Start()
     {
+        Load();
         itemID = Random.Range(0, 3);
         if (itemID == 3)
         {

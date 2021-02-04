@@ -8,12 +8,13 @@ public class ItemScroller : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.left * Time.deltaTime * 60);
+        border();
     }
     private void border()
     {
-        if (this.transform.position.x <= -960)
+        if (this.transform.position.x <= -338)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
