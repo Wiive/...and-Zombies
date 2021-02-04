@@ -9,6 +9,9 @@ public class MenuManager : MonoBehaviour
     [Header("LoadingScreen")]
     [SerializeField] private GameObject LoadingScreen;                              //the gameobject for the loading screen
     [SerializeField] private Slider LoadingBar;                                     //the Slider in the LoadingScreen GameObject
+
+    [SerializeField] private GameObject HowScreen;
+    private bool activity = false;
     public void LevelLoader(int SceneIndex)                                         //the function that makes you able to load diffrent scene with loading screen
     {
         StartCoroutine(AsyncLoad(SceneIndex));                                      //decided by chosen Int which scene you want
@@ -18,6 +21,11 @@ public class MenuManager : MonoBehaviour
     {
         StartCoroutine(AsyncLoad(SceneManager.GetActiveScene().buildIndex));        //Load current scene      
         Time.timeScale = 1f;
+    }
+    public void HowtoPlay()
+    {
+        activity = !activity;
+        HowScreen.SetActive(activity);
     }
     IEnumerator AsyncLoad(int SceneIndex)
     {

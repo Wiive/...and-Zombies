@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 6655408318753466163, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_Transition
       value: 1
@@ -404,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -413,14 +417,14 @@ PrefabInstance:
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1627697838}
+      objectReference: {fileID: 1604281018}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: HowtoPlay
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -428,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: MenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -440,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8218160097382459534, guid: faa8b6907f3e38941a21f497aff4943c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -621,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6338313256621320740, guid: b774826114c1fa74aa4bad268d342f26, type: 3}
+      propertyPath: htp_Screen
+      value: 
+      objectReference: {fileID: 1627697838}
     - target: {fileID: 6338313256621320741, guid: b774826114c1fa74aa4bad268d342f26, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -723,6 +731,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b774826114c1fa74aa4bad268d342f26, type: 3}
+--- !u!114 &1604281018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6338313256621320740, guid: b774826114c1fa74aa4bad268d342f26, type: 3}
+  m_PrefabInstance: {fileID: 1604281017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a69e734a8febcf4ca87dd098107345e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627697838
 GameObject:
   m_ObjectHideFlags: 0
