@@ -42,38 +42,33 @@ public class PlayerAnimation : MonoBehaviour
 
     public void CheckMovement()
     {
-        if (playerState != PlayerState.idle)
+        xAxis = Input.GetAxis("Horizontal");
+        yAxis = Input.GetAxis("Vertical");
+        if (xAxis == 0 && yAxis == 0)
         {
-            xAxis = Input.GetAxis("Horizontal");
-            yAxis = Input.GetAxis("Vertical");
-
-            if (xAxis == 0 && yAxis == 0)
-            {
-                playerState = PlayerState.idle;
-            }
-            else
-            {
-                playerState = PlayerState.walking;
-            }
+            playerState = PlayerState.idle;
+        }
+        else
+        {
+            playerState = PlayerState.walking;
         }
 
-        if (yAxis > 0.5)
+        if (yAxis > 0)
         {
             Debug.Log("moving up");
             lookDirection = LookDirection.up;
         }
-        else if (yAxis < 0.5)
+        else if (yAxis < 0)
         {
             Debug.Log("moving down");
-
             lookDirection = LookDirection.down;
         }
-        else if (xAxis < 0.5)
+        else if (xAxis < 0)
         {
             Debug.Log("moving left");
             lookDirection = LookDirection.left;
         }
-        else if (xAxis > 0.5)
+        else if (xAxis > 0)
         {
             Debug.Log("moving right");
             lookDirection = LookDirection.right;
