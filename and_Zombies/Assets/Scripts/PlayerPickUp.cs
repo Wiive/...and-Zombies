@@ -33,7 +33,7 @@ public class PlayerPickUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Cactus")
+        if (collision.gameObject.tag == "Cactus" && !hasCactusPower)
         {
             cactus = collision.transform;                                           //Setting the cactus as an transform referenst
             CactusPower powerup = collision.gameObject.GetComponent<CactusPower>(); //Getting acces to the powerup fuctions
