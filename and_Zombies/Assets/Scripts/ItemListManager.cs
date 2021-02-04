@@ -7,21 +7,21 @@ using TMPro;
 public class ItemListManager : MonoBehaviour
 {
     [Header("Objective Lists")]
-    [SerializeField] private TextMeshProUGUI[] ListText;
+    [SerializeField] private Image[] ObjectSprite;
     [SerializeField]private bool[] ItemObtained;
     [Header("Win Screen")]
     [SerializeField] private GameObject winScreen;
     
     private void Start()
     {
-        for (int i = 0; i < ListText.Length; i++)
+        for (int i = 0; i < ObjectSprite.Length; i++)
         {
-            ListText[i].color = Color.red;
+            ObjectSprite[i].color = Color.grey;
         }
     }
     public virtual void ObjectObtained(int ItemIndex)
     {
-        ListText[ItemIndex].color = Color.green;
+        ObjectSprite[ItemIndex].color = Color.white;
         ItemObtained[ItemIndex] = true;
         WinCondition();
     }
