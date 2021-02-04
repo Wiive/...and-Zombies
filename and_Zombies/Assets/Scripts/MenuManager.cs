@@ -12,10 +12,12 @@ public class MenuManager : MonoBehaviour
     public void LevelLoader(int SceneIndex)                                         //the function that makes you able to load diffrent scene with loading screen
     {
         StartCoroutine(AsyncLoad(SceneIndex));                                      //decided by chosen Int which scene you want
+        Time.timeScale = 1f;
     }
     public void Restart()                                         
     {
-        StartCoroutine(AsyncLoad(SceneManager.GetActiveScene().buildIndex));        //Load current scene                                
+        StartCoroutine(AsyncLoad(SceneManager.GetActiveScene().buildIndex));        //Load current scene      
+        Time.timeScale = 1f;
     }
     IEnumerator AsyncLoad(int SceneIndex)
     {

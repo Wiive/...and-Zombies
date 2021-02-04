@@ -51,5 +51,6 @@ public class Health : MonoBehaviour
     public virtual void Kill()
     {
         LoseScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
