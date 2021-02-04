@@ -12,9 +12,13 @@ public class ItemType : MonoBehaviour
 
     private void Start()
     {
-        itemID = Random.Range(0, 2);
+        itemID = Random.Range(0, 3);
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
+
+        if (itemID == 3)
+        {
+            itemID = 2;
+        }
         if (itemID == 0)
         {
             spriteRenderer.sprite = ItemSprite[0];
@@ -27,6 +31,7 @@ public class ItemType : MonoBehaviour
         {
             spriteRenderer.sprite = ItemSprite[2];
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

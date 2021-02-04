@@ -708,6 +708,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81ca7a4719327e438323da1a0da5a85, type: 3}
+--- !u!1001 &1008800198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1127014081}
+    m_Modifications:
+    - target: {fileID: 8013292122496322246, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: spawnTimer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322246, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: cactusPrefab
+      value: 
+      objectReference: {fileID: 3895336807625271616, guid: 155ea80b06c121a4e93de91abeb28da0, type: 3}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.04657
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -139.00919
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 162.58536
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013292122496322249, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+      propertyPath: m_Name
+      value: CactusSpawner (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+--- !u!4 &1008800199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8013292122496322247, guid: fbca5bbd334f9df4389eee32a361c4be, type: 3}
+  m_PrefabInstance: {fileID: 1008800198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1066536706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,6 +873,7 @@ Transform:
   - {fileID: 1261150196}
   - {fileID: 233166357}
   - {fileID: 1947667933}
+  - {fileID: 1008800199}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
