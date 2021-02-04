@@ -67,6 +67,7 @@ public class EnemieMovement : MonoBehaviour
                 if (manager != null)
                 {
                     Health playerHealth = manager.GetComponent<Health>();
+                    GotKilled();
                     playerHealth.DamagePlayer(1);
                 }
                 else
