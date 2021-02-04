@@ -14,6 +14,7 @@ public class ItemType : MonoBehaviour
     {
         itemID = Random.Range(0, 2);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
         if (itemID == 0)
         {
             spriteRenderer.sprite = ItemSprite[0];
