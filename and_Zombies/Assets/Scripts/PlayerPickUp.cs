@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerPickUp : MonoBehaviour
 {
     public bool hasCactusPower = false;
+    public AudioClip powerUpSound;
+    AudioSource audioSource;
     private float timer;
     Transform cactus;
 
@@ -40,6 +42,9 @@ public class PlayerPickUp : MonoBehaviour
             powerup.ActivedCactusPower(powerup.powerUpTime);                        
             timer = powerup.powerUpTime;                                            //Setting the players powerup timer to the cactus timer
             hasCactusPower = true;
+
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(powerUpSound);
         }
         return;
     }
