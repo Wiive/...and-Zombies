@@ -58,7 +58,22 @@ public class EnemieMovement : MonoBehaviour
         {
             var player = collision.gameObject;
             if (player.GetComponent<PlayerPickUp>().CactusPower())
+            {
                 GotKilled();
+            }
+            else
+            {
+                var manager = GameObject.Find("Managers");              //I hope we can name this object to something better later, just to try right now.
+                if (manager != null)
+                {
+                    Health playerHealth = manager.GetComponent<Health>();
+                    playerHealth.DamagePlayer(1);
+                }
+                else
+                {
+                    Debug.LogError("Missing Manager in scene");
+                }
+            }
         }
     }
 }
