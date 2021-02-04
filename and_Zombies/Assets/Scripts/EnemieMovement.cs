@@ -9,12 +9,15 @@ public class EnemieMovement : MonoBehaviour
     public bool isAlive = true;
 
     GameObject player;
+    private SpriteRenderer mySprite;
 
     //Spawn
     //Attack
 
     private void Start()
     {
+        mySprite = GetComponent<SpriteRenderer>();
+
         RB = GetComponent<Rigidbody2D>();
         
         if (GameObject.FindGameObjectWithTag("Player") != null)             //Looking if a object with the "Player"-tag is in the scene
@@ -28,9 +31,11 @@ public class EnemieMovement : MonoBehaviour
 
     private void Update()
     {
+     
         if(isAlive)
         {
            MoveTowardsPlayer();
+            ZombieDirection();
         }
     }
 
@@ -44,7 +49,18 @@ public class EnemieMovement : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
 
         RB.velocity = direction * speed;
+    }
 
+    private void ZombieDirection()
+    {
+        if (transform.position.x < player.transform.position.x)
+        {
+            mySprite.flipX = true;
+        }
+        else
+        {
+            mySprite.flipX = false;
+        }
     }
     private void GotKilled()
     {
