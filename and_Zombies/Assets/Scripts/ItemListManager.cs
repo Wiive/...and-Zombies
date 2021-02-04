@@ -32,6 +32,7 @@ public class ItemListManager : MonoBehaviour
             ItemObtained[2] == true)
         {
             winScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
