@@ -10,11 +10,15 @@ public class ItemType : MonoBehaviour
 
     [SerializeField]private ItemListManager ItemManager;
 
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        var ItemManager = GameObject.Find("Managers");
+        ItemManager.GetComponent<ItemListManager>();
+    }
     private void Start()
     {
         itemID = Random.Range(0, 3);
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
         if (itemID == 3)
         {
             itemID = 2;

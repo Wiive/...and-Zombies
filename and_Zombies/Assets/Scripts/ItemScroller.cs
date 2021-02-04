@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ItemScroller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        transform.Translate(Vector3.left * Time.deltaTime * 60);
+    }
+    private void border()
+    {
+        if (this.transform.position.x <= -960)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
